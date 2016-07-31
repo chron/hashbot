@@ -1,3 +1,3 @@
 require 'slack-ruby-bot'
-require 'hashbot/commands/test'
+require_all 'hashbot/commands'
 require 'hashbot/bot'

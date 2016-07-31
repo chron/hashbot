@@ -12,6 +12,8 @@ gem 'dm-postgres-adapter'
 
 gem 'dotenv'
 
+gem 'require_all'
+
 group :development, :test do
   gem 'rake'
   gem 'foreman'

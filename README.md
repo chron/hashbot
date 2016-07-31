@@ -19,7 +19,7 @@ To spin up a local instance, first provision a database:
 Then you can start the bot and webapp via foreman:
 
 `foreman start`
- 
+
 ## Deployment
 
 The "production" instance is running on Heroku, so:
@@ -31,3 +31,7 @@ Maintenance mode on Heroku won't actually stop the bot, it will only prevent acc
 `heroku ps:scale web=0`
 
 Don't forget to set it back to 1 when you are ready to run again!
+
+If you want to connect to the production database, you can use the Heroku toolbelt:
+
+`heroku pg:psql`
