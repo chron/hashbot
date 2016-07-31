@@ -6,7 +6,7 @@ Dotenv.load
 require 'data_mapper'
 require 'models/challenge'
 
-DataMapper.setup(:default, 'postgres://localhost/hashbot')
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/hashbot')
 DataMapper.finalize.auto_upgrade!
 
 require 'hashbot'
