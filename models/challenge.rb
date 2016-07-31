@@ -10,6 +10,10 @@ class Challenge
   has n, :submissions
 
   def best_score
-    submissions.max(:score)
+    submissions.min(:score)
+  end
+
+  def desired_result
+    CodeEvaluator.evaluate(result)
   end
 end

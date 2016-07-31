@@ -4,6 +4,7 @@ require 'require_all'
 require 'dotenv'
 Dotenv.load
 
+require_all 'lib'
 require 'data_mapper'
 require_all 'models'
 

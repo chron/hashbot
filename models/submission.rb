@@ -10,12 +10,7 @@ class Submission
   belongs_to :challenge
 
   def value_is_valid?
-    # TODO: $SAFE etc, obviously this is the world's biggest security flaw
-    begin
-      eval(value) == eval(challenge.result)
-    rescue Exception => e
-      raise CodeEvalException.new(value, e), "There was an error evaluating the code."
-    end
+    CodeEvaluator.evaluate(value) == challenge.desired_result
   end
 
   def calculate_score!

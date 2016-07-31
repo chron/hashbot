@@ -6,9 +6,11 @@ Write some Ruby code that doesn't rely on Rails or its ecosystem.
 
 Deploy and debug on Heroku.
 
-Try a few new technologies:
- * Sinatra
- * DataMapper
+The stack:
+ * Ruby 2.3.1
+ * Sinatra on Puma
+ * DataMapper on Postgres
+ * The Slack API
 
 # ROADMAP
 
@@ -25,15 +27,19 @@ Try a few new technologies:
 
 [x] Start a new code golf challenge
 [ ] Announce to channel
+[ ] Challenge end.  Maybe start and end dates?
 
 ## Submissions
 
 [x] Submit to the bot via channel or DM
+[ ] Evaluate code in a safe-ish way
 [x] Get a useful response message
 [x] Error handling for syntax problems etc
+[ ] Announce in the channel when we have a new leader
 
 ## Reporting
 
+[ ] View info about the current challenge
 [ ] Get details of my best submission
 [ ] See a leaderboard
 
