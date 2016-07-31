@@ -3,6 +3,12 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'dotenv'
 Dotenv.load
 
+require 'data_mapper'
+require 'models/challenge'
+
+DataMapper.setup(:default, 'postgres://localhost/hashbot')
+DataMapper.finalize.auto_upgrade!
+
 require 'hashbot'
 require 'web'
 
