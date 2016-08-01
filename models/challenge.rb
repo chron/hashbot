@@ -23,7 +23,7 @@ class Challenge
     # TODO: there's probably a smart way to do this in DM
     User.all.map do |u|
       [u, u.best_submission_for(self)]
-    end.sort_by { |u,s| s.score }
+    end.sort_by { |u,s| [s.score, s.created_at] }
   end
 
   # Returns the active challenge - at the moment just the most recent one.
