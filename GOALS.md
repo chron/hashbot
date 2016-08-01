@@ -26,7 +26,7 @@ The stack:
 ## Challenges
 
 [x] Start a new code golf challenge
-[ ] Announce to channel
+[x] Announce to channel
 [ ] Challenge end.  Maybe start and end dates?
 
 ## Submissions
@@ -35,13 +35,13 @@ The stack:
 [ ] Evaluate code in a safe-ish way
 [x] Get a useful response message
 [x] Error handling for syntax problems etc
-[ ] Announce in the channel when we have a new leader
+[x] Announce in the channel when we have a new leader
 
 ## Reporting
 
-[ ] View info about the current challenge
-[ ] Get details of my best submission
-[ ] See a leaderboard
+[x] View info about the current challenge
+[x] Get details of my best submission
+[x] See a leaderboard
 
 ## Stretch Goals
 
