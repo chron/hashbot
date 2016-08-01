@@ -5,10 +5,7 @@ module Hashbot
         if match['expression'].nil?
           client.say(channel: data.channel, text: "Usage: submit `<your code here>`")
         else
-          u = User.first_or_create(slug: data.user)
-          u.name = client.users[data.user].try(:name)
-          u.save # CHECK: does this hit the DB even if nothing has changed?
-
+          u = User[data.user, client.users]
           c = Challenge.current
 
           begin
@@ -19,7 +16,7 @@ module Hashbot
             new_score = s.calculate_score!
 
             if new_score.nil?
-              client.say(channel: data.channel, text: ":fearful: Your code did not produce valid input for the challenge.  Try again!")
+              client.say(channel: data.channel, text: ":fearful: Your code did not produce valid output for the challenge.  Try again!\nCode: `#{s.value}`\nExpected result: `#{c.desired_result}`\nActual result: `#{s.actual_result}`")
             elsif high_score.nil?
               client.say(channel: data.channel, text: "Your score for that submission was `#{s.score}`.  That's the first valid submission for this challenge, so you are currently in the lead! :facepunch:")
             elsif new_score < high_score

@@ -10,7 +10,11 @@ class Submission
   belongs_to :challenge
 
   def value_is_valid?
-    CodeEvaluator.evaluate(value) == challenge.desired_result
+    actual_result == challenge.desired_result
+  end
+
+  def actual_result
+    CodeEvaluator.evaluate(value)
   end
 
   def calculate_score!
