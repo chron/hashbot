@@ -4,7 +4,7 @@ module Hashbot
       command 'leaderboard' do |client, data, match|
         c = Challenge.current
         challenge_age = Time.now - c.created_at
-        leaderboard_text = c.leaderboard.map { |u,s| '%3i %s' % [s,u.slug] } * ?\n
+        leaderboard_text = c.leaderboard.map { |u,s| '%3i %s' % [s,u.name] } * ?\n
 
         client.say(channel: data.channel, text: "The challenge has been running for %i:%02i.  Current leaderboard:\n\n```%s```" % [
           challenge_age / 60,

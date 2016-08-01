@@ -48,3 +48,4 @@ The stack:
 [ ] i18n messages
 [ ] Other challenge types (quickest, most performant, etc.)
 [ ] Sexy date format (distance_of_time_in_words etc)
+[ ] Capture name changes faster (currently only on submission)

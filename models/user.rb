@@ -3,7 +3,7 @@ class User
 
   property :id, Serial
   property :slug, String
-  #property :name, String
+  property :name, String
 
   has n, :submissions
 

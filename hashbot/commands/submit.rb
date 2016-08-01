@@ -6,6 +6,9 @@ module Hashbot
           client.say(channel: data.channel, text: "Usage: submit `<your code here>`")
         else
           u = User.first_or_create(slug: data.user)
+          u.name = client.users[data.user].try(:name)
+          u.save # CHECK: does this hit the DB even if nothing has changed?
+
           c = Challenge.current
 
           begin
