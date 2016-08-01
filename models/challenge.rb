@@ -13,6 +13,10 @@ class Challenge
     submissions.min(:score)
   end
 
+  def best_submission
+    submissions.first(score: best_score, order: :created_at)
+  end
+
   # This value is compared to eval'd submissions to determine validity.
   def desired_result
     CodeEvaluator.evaluate(result)

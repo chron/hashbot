@@ -28,7 +28,9 @@ The stack:
 
 [x] Start a new code golf challenge
 [x] Announce to channel
-[ ] Challenge end.  Maybe start and end dates?
+[x] Challenge ends when new challenge begins
+[x] Announce challenge winner to main channel
+[ ] Maybe start and end dates?
 
 ## Submissions
 

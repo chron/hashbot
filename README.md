@@ -16,13 +16,17 @@ To spin up a local instance, first provision a database:
 
 `createdb hashbot`
 
+Install the bundle:
+
+`bundle install`
+
 Then you can start the bot and webapp via foreman:
 
 `foreman start`
 
 ## Deployment
 
-The "production" instance is running on Heroku, so:
+The "production" instance is running on Heroku, so once you have your remote set up:
 
 `git push heroku master`
 
