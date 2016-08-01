@@ -12,9 +12,9 @@ class User
   end
 
   # Returns user's submission with the best score.  If there's a tie, it will
-  # return the most recent.
+  # return the first one posted.
   def best_submission_for(challenge)
-    submissions.all(challenge: challenge, score: best_score_for(challenge)).first(order: :created_at.desc)
+    submissions.all(challenge: challenge, score: best_score_for(challenge)).first(order: :created_at.asc)
   end
 
   def self.[](slug, users=nil)

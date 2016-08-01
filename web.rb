@@ -3,7 +3,7 @@ require 'sinatra/base'
 module Hashbot
   class Web < Sinatra::Base
     get '/' do
-      'Welcome to me.'
+      haml :index
     end
   end
 end

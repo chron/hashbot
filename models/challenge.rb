@@ -20,9 +20,10 @@ class Challenge
 
   # Returns a list of users with scores, ordered with the best score first.
   def leaderboard
-    leaderboard = submissions.aggregate(:user_id, :score.max)
     # TODO: there's probably a smart way to do this in DM
-    leaderboard.map { |uid,score| [User.get(uid), score] }.sort_by { |uid,score| score }
+    User.all.map do |u|
+      [u, u.best_submission_for(self)]
+    end.sort_by { |u,s| s.score }
   end
 
   # Returns the active challenge - at the moment just the most recent one.

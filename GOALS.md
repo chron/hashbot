@@ -9,6 +9,7 @@ Deploy and debug on Heroku.
 The stack:
  * Ruby 2.3.1
  * Sinatra on Puma
+ * Really basic FED with HAML templates, Pure.css, and raw css files.
  * DataMapper on Postgres
  * The Slack API
 

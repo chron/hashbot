@@ -1,0 +1,14 @@
+%table.pure-table.pure-table-striped
+  %thead
+    %tr
+      %th Position
+      %th Name
+      %th Best Score
+      %th Timestamp
+  %tbody
+    - Challenge.current.leaderboard.each_with_index do |(u,s),i|
+      %tr
+        %td= i + 1
+        %td= u.name
+        %td= s.score
+        %td= s.created_at.strftime('%b %d %H:%M')
