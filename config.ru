@@ -1,5 +1,6 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'require_all'
+require 'pry' if Gem.loaded_specs.has_key?('pry')
 
 require 'dotenv'
 Dotenv.load

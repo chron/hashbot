@@ -17,4 +17,5 @@ gem 'require_all'
 group :development, :test do
   gem 'rake'
   gem 'foreman'
+  gem 'pry'
 end

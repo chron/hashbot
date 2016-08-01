@@ -1,7 +1,9 @@
 class User
   include DataMapper::Resource
 
-  property :slug, String, key: true
+  property :id, Serial
+  property :slug, String
+  #property :name, String
 
   has n, :submissions
 

@@ -6,7 +6,7 @@ module Hashbot
           client.say(channel: data.channel, text: "Usage: submit `<your code here>`")
         else
           u = User.first_or_create(slug: data.user)
-          c = Challenge.first(order: :created_at.desc)
+          c = Challenge.current
 
           begin
             high_score = c.best_score
