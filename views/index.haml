@@ -1,4 +1,8 @@
-%table.pure-table.pure-table-striped
+%p The current challenge is to produce this expression with ruby code in as few characters as possible:
+%code= @challenge.result
+%p Here is the current leaderboard:
+
+%table.pure-table.pure-table-horizontal.pure-table-striped.full-width
   %thead
     %tr
       %th Position
@@ -6,7 +10,7 @@
       %th Best Score
       %th Timestamp
   %tbody
-    - Challenge.current.leaderboard.each_with_index do |(u,s),i|
+    - @challenge.leaderboard.each_with_index do |(u,s),i|
       %tr
         %td= i + 1
         %td= u.name
